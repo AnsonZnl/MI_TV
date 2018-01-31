@@ -1,6 +1,7 @@
-/***********通用基本类1************/
 
-/*格式化样式*/
+    /***********通用基本类1************/
+
+    /*格式化样式*/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
 table {border-collapse:collapse;border-spacing:0;}
 fieldset,img {border:0}
@@ -121,7 +122,6 @@ input {
 }
 ul {
     clear:both;
-    overflow:hidden;
     width: 100%;
 }
 ul, li {
@@ -315,4 +315,15 @@ form a:hover{
 .btn:hover{
     color: #fff;
     background-color: #ff6700;
+}
+/*导航隐藏层*/
+.header-nav .po_re{
+    position: relative;
+}
+.header-nav .site-category{
+    position: absolute;
+    top: 40px;
+}
+.header-nav .J_categoryList{
+    position: absolute;
 }
