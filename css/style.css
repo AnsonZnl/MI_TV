@@ -237,10 +237,10 @@ a:hover{
 .header-nav{
     margin-left: 40px;
 }
-.header-nav ul li{
+.header-nav>ul>li{
     float: left;
 }
-.header-nav ul li a{
+.header-nav>ul>li>a{
     display: block;
     padding: 15px 10px;
     color: #333333;
@@ -317,13 +317,13 @@ form a:hover{
     background-color: #ff6700;
 }
 /*导航隐藏层*/
-.header-nav .po_re{
+.header-nav .J_divre{
     position: relative;
 }
-.header-nav .site-category{
+.header-nav .J_divab{
     position: absolute;
     top: 40px;
 }
-.header-nav .J_categoryList{
-    position: absolute;
+.J_divab ul li {
+    width: 130px;
 }

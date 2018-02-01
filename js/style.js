@@ -32,3 +32,28 @@ form.onmouseout=function () {
     inp.style.border="solid 1px #e0e0e0"  ;
     btn.style.border="solid 1px #e0e0e0"  ;
 };
+///导航栏 显示隐藏
+var Jdivre=document.getElementById("J_divre");
+var Jdivab=document.getElementById("J_divab");
+Jdivre.onmousemove=function (ev) {
+    Jdivab.style.display="block"
+};
+Jdivab.onmouseout=function (ev) {
+    Jdivab.style.display="none"
+};
+Jdivre.onmouseout=function (ev) {
+    Jdivab.style.display="none"
+};
+
+var NavLiPoRe=document.getElementsByClassName("J_navCategory");
+var NavLiPoAb=document.getElementsByClassName("J_site-category");
+for (var i=0;i<NavLiPoRe.length;i++){
+    NavLiPoRe[i].index=i;
+    NavLiPoRe[i].onmousemove=function (ev) {
+        var n=Number(this.index);
+        for(var j=0;j<NavLiPoRe.length;j++){
+            NavLiPoAb[j].style.display="none";
+        }
+        NavLiPoAb[n].style.display="block";
+    };
+}
