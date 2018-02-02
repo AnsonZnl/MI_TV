@@ -47,13 +47,25 @@ Jdivre.onmouseout=function (ev) {
 
 var NavLiPoRe=document.getElementsByClassName("J_navCategory");
 var NavLiPoAb=document.getElementsByClassName("J_site-category");
-for (var i=0;i<NavLiPoRe.length;i++){
-    NavLiPoRe[i].index=i;
-    NavLiPoRe[i].onmousemove=function (ev) {
-        var n=Number(this.index);
-        for(var j=0;j<NavLiPoRe.length;j++){
-            NavLiPoAb[j].style.display="none";
-        }
-        NavLiPoAb[n].style.display="block";
-    };
+var LiPoRe=document.getElementsByClassName("J_category-item");
+var LiPoAb=document.getElementsByClassName("J_children-list");
+function hidd(pore,poab) {
+    for (var i=0;i<pore.length;i++){
+        pore[i].index=i;
+        pore[i].onmousemove=function (ev) {
+            var n=Number(this.index);
+            for(var j=0;j<pore.length;j++){
+                poab[j].style.display="none";
+            }
+            poab[n].style.display="block";
+            pore[n].onmouseout=function () {
+                poab[n].style.display="none"
+            };
+            poab[n].onmouseout=function () {
+                poab[n].style.display="none"
+            }
+        };
+    }
 }
+hidd(NavLiPoRe,NavLiPoAb);
+hidd(LiPoRe,LiPoAb);

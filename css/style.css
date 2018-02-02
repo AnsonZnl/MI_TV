@@ -321,9 +321,37 @@ form a:hover{
     position: relative;
 }
 .header-nav .J_divab{
+    display: none;
     position: absolute;
     top: 40px;
+    border: solid #ff6700 1px;
+}
+.J_site-category{
+    display: none;
+    position: absolute;
+    width: 1226px;
+    left: 130px;
+}
+.J_site-category li{
+    display: inline-block;
 }
 .J_divab ul li {
     width: 130px;
 }
+.J_category-item{
+    position: relative;
+    background: #ffff;
+}
+.J_children-list{
+    display: none;
+    z-index: 3;
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 400px;
+    background: #fff;
+}
+.J_children-list li{
+    display: inline-block;
+    width: 33%;
+    }
