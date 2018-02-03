@@ -62,10 +62,19 @@ function hidd(pore,poab) {
                 poab[n].style.display="none"
             };
             poab[n].onmouseout=function () {
-                poab[n].style.display="none"
-            }
+                poab[n].style.display="none";
+            };
         };
     }
 }
 hidd(NavLiPoRe,NavLiPoAb);
 hidd(LiPoRe,LiPoAb);
+for (var t=0;t<LiPoAb.length;t++){
+    LiPoAb[t].index=t;
+    LiPoAb[t].onmousemove=function (ev) {
+       this.previousElementSibling.classList.add("list_color");
+    };
+    LiPoAb[t].onmouseout=function (ev) {
+       this.previousElementSibling.classList.remove("list_color");
+    };
+}

@@ -218,6 +218,7 @@ a:hover{
     color: #ff6700;
 }
 .main_cartmenu {
+    z-index: 4;
     position: absolute;
     right: 0;
     display: none;
@@ -227,18 +228,20 @@ a:hover{
     text-align: center;
     font-size: 12px;
     border-bottom: solid 1px rgba(119, 119, 119, 0.38) ;
+    background: #fff;
 }
 
 /*header 样式*/
 .site-header{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    border-bottom: 1px #d4d4d4 solid;
 }
 .header-nav{
     margin-left: 40px;
 }
 .header-nav>ul>li{
     float: left;
+    padding-bottom: 25px;
+    padding-top: 20px;
 }
 .header-nav>ul>li>a{
     display: block;
@@ -247,6 +250,10 @@ a:hover{
 }
 .header-nav ul li a:hover{
     color: #ff6700;
+}
+.site-header .logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .site-header .logo a {
     display: block;
@@ -260,7 +267,7 @@ a:hover{
     font-size: 35px;
 }
 .header-search{
-
+    padding: 20px 0;
 }
 .header-search form{
     position: relative;
@@ -284,8 +291,9 @@ a:hover{
     position: absolute;
     top: 0;
     right: 9px;
-    width: 56px;
+    width: 58px;
     height: 54px;
+    padding: 20px;
     cursor: pointer;
     border:solid 1px #e0e0e0;
     border-left: none;
@@ -323,35 +331,86 @@ form a:hover{
 .header-nav .J_divab{
     display: none;
     position: absolute;
-    top: 40px;
+    top: 96px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border: solid #ff6700 1px;
 }
 .J_site-category{
     display: none;
     position: absolute;
-    width: 1226px;
-    left: 130px;
+    width: 1200px;
+    left: 150px;
+    top: 135px;
 }
 .J_site-category li{
     display: inline-block;
 }
-.J_divab ul li {
-    width: 130px;
+.J_divab>ul>li>span {
+    width: 170px;
+    padding:7px 15px;
 }
 .J_category-item{
+    display: block;
     position: relative;
-    background: #ffff;
+    cursor: pointer;
+}
+.J_category-item>span{
+    display:block;
+    color: #424242;
+    font-size: 15px;
+}
+.J_category-item>span>i{
+    float: right;
+    line-height: 20px;
+    font-size: 18px;
+}
+.J_category-item>span:hover {
+    background: #ff6700;
+    color: #fff;
+}
+ .J_category-item:hover {
+    background: #ff6700;
+        color: #fff;
 }
 .J_children-list{
+    width: 800px;
     display: none;
     z-index: 3;
     position: absolute;
-    left: 100px;
+    left: 200px;
     top: 0;
-    width: 400px;
     background: #fff;
 }
-.J_children-list li{
+.J_children-list>li{
     display: inline-block;
-    width: 33%;
+    width: 170px;
     }
+.nav_Product {
+    display: block;
+    text-align: center;
+}
+.nav_Product img{
+    height: 115px;
+    display: block;
+    margin-top: 8px;
+}
+.nav_Product .nav_Product_name{
+    color: #333333;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.nav_Product .nav_product_intr{
+    color: #ff6700;
+    font-size: 13px;
+}
+.nav_Product .new{
+    border:solid #ff6700 1px;
+    padding: 3px 14px;
+    font-size: 12px;
+    color: #ff6700;
+}
+.list_color{
+    color: #fff;
+}
