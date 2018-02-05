@@ -72,9 +72,25 @@ hidd(LiPoRe,LiPoAb);
 for (var t=0;t<LiPoAb.length;t++){
     LiPoAb[t].index=t;
     LiPoAb[t].onmousemove=function (ev) {
-       this.previousElementSibling.classList.add("list_color");
+        this.previousElementSibling.classList.add("list_color");
     };
     LiPoAb[t].onmouseout=function (ev) {
-       this.previousElementSibling.classList.remove("list_color");
+        this.previousElementSibling.classList.remove("list_color");
     };
 }
+//top nav
+//滑动到底部使浮层消失
+// var content=document.querySelector("body");
+var navSwitch=document.getElementById("navSwitch");
+window.onscroll = function(){
+    var con = document.documentElement;
+    var Top = con.scrollTop;
+    console.log(Top);
+    if (Top<170){
+        navSwitch.style.top="137"
+    }else if(Top===200){
+        navSwitch.style.top="137"
+    }else{
+        navSwitch.style.top="0"
+    }
+};
