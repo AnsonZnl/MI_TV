@@ -86,11 +86,9 @@ window.onscroll = function(){
     var con = document.documentElement;
     var Top = con.scrollTop;
     console.log(Top);
-    if (Top<170){
-        navSwitch.style.top="137"
-    }else if(Top===200){
-        navSwitch.style.top="137"
+    if (Top>195){
+        navSwitch.classList.add(".po_fixed_down");
     }else{
-        navSwitch.style.top="0"
+        navSwitch.classList.remove(".po_fixed_down");
     }
 };
